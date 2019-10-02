@@ -1,65 +1,108 @@
 <!DOCTYPE html>
-  <html>
+<html>
 <title>Weather Dashboard</title>
 <header>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </header>
+
 <body>
-        <div class="container-fluid">
-                <div class="card">
-                        <div class="card-header text-center bg-dark text-white">
-                          <h2>Weather Dashboard</h2>
-                        </div>
-                        <div class="card-body">
-                          <blockquote class="blockquote mb-0">
-                                <div class="row">
-                                        <div class="col-sm-3">
-                                          <div class="card">
-                                            <div class="card-body">
-                                              <p class="card-title">Search for a city:</p>
-                                              <div class="card" style="width: 18rem;">
-                                                    <ul class="list-group list-group-flush">
-                                                      <li class="list-group-item">City 1</li>
-                                                      <li class="list-group-item">City 2</li>
-                                                      <li class="list-group-item">City 3</li>
-                                                      <li class="list-group-item">City 4</li>
-                                                      <li class="list-group-item">City 5</li>
-                                                      <li class="list-group-item">City 6</li>
-                                                      <li class="list-group-item">City 7</li>
-                                                      <li class="list-group-item">City 8</li>
-                                                    </ul>
-                                                  </div>
-                                             
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="col-sm-9">
-                                          <div class="card">
-                                            <div class="card-body">
-                                              <h4 class="card-title">(City & Date)</h4>
-                                              <p>Temperature:</p>
-                                              <p>Humidity:</p>
-                                              <p>Wind Speed:</p>
-                                              <p>UV Index:</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="card">
-                                                <div class="card-body">
-                                                  <h5 class="card-title">Card title</h5>
-                                                  <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-                                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                                </div>
-                                              </div>
-                                      </div>
-                                      
-                                      <blockquote class="row col-md-9 offset-md-9"><h3> 5-Day Forecast</h3>
-                                    </blockquote>
-                          </blockquote>
-                        </div>
-                      </div>
-        </div>
+
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header text-center bg-dark text-white">
+        <h2>Weather Dashboard</h2>
+      </div>
+      
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">Search for a city:</p>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="search" aria-label="city search"
+                      aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button" id="button-addon2 searchBtn">Search</button>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                   
+                     
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-9">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title currentCity currentDate">City: </h4>
+                  <div class="temp">Temperature:</div>
+                  <div class="humidity">Humidity:</div>
+                  <div class="windSpeed">Wind Speed:</div>
+                </div>
+              </div>
+            </div>
+            
+
+          <h3 class="row col-md-2 mt-5 mb-3 mx-auto">
+             5-Day Forecast</h3>
+          
+        <div class="row mx-auto">
+              <div class="card text-white bg-primary mb-3 mr-4" style="width: 16rem;">
+                  <div class="card-body" style="font-size:18px;">
+                <h5 class="card-title dayOneDate">Date:</h5>
+                  <div class="dayOneTemp">Temperature:</div>
+                  <div class="dayOneIcon "></div>
+                  <div class="dayOneHumid">Humidity:</div>
+              </div>
+            </div>
+            <div class="card text-white bg-primary mb-3 mr-4" style="width: 16rem;">
+                <div class="card-body" style="font-size:18px;">
+                <h5 class="card-title dayTwoDate">Date:</h5>
+                  <div class="dayTwoTemp">Temperature:</div>
+                  <div class="dayTwoIcon "></div>
+                  <div class="dayTwoHumid">Humidity:</div>
+              </div>
+            </div>
+            <div class="card text-white bg-primary mb-3 mr-4" style="width: 16rem;">
+                <div class="card-body" style="font-size:18px;">
+                <h5 class="card-title dayThreeDate">Date:</h5>
+                <div class="dayThreeTemp">Temperature:</div>
+                <div class="dayThreeIcon"></div>
+                <div class="dayThreeHumid">Humidity:</div>
+              </div>
+            </div>
+            <div class="card text-white bg-primary mb-3 mr-4" style="width: 16rem;">
+                <div class="card-body" style="font-size:18px;">
+                <h5 class="card-title dayFourDate">Date:</h5>
+                <div class="dayFourTemp">Temperature:</div>
+                <div class="dayFourIcon"></div>
+                <div class="dayFourHumid">Humidity:</div>
+              </div>
+            </div>
+            <div class="card text-white bg-primary mb-3 mr-4" style="width: 16rem;">
+                <div class="card-body" style="font-size:18px;">
+                <h5 class="card-title dayFiveDate">Date:</h5>
+                <div class="dayFiveTemp">Temperature:</div>
+                <div class="dayFiveIcon"></div>
+                <div class="dayFiveHumid">Humidity:</div>
+              </div>
+            </div>
+          </div>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="lib/moment/moment.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
-  </html>
+</html>

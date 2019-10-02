@@ -1,0 +1,3 @@
+API Key = 166a433c57516f51dfab1f7edaed8413
+
+"https://api.openweathermap.org/data/2.5/forecast?q=boston&appid=166a433c57516f51dfab1f7edaed8413
